@@ -20,6 +20,7 @@ int main(void) {
     printf("These numbers are estimates. Don’t forget to do your part and DRS your shares.\n\n");
     printf("New apes count calculated from today's high score - the first account number I saw when we first started counting CS accounts.\n\n");
     printf("%d - 30,000 = %d (New CS accounts - previous accounts)\n", csAccounts, GMEaccounts);
-
+    
     return 0;
+
 }
