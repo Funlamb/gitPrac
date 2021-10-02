@@ -22,5 +22,6 @@ int main(void) {
     printf("%d - 30,000 = %d (New CS accounts - previous accounts)\n", csAccounts, GMEaccounts);
     
     return 0;
-
+//It looks like I have fixed everything in this file. 
+//I have some more work to do with the purchase of one share of AMC
 }
