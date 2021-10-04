@@ -11,6 +11,7 @@ int main(void) {
     float allOutstandingShare = (float)outstandingShares / GMEaccounts;
     float aosMinusRC = ((float)outstandingShares - 9000000) / GMEaccounts;
     float aosMinusInstitutional = ((float)outstandingShares - 36400000) / GMEaccounts;
+    printf("Average positions in DRS to cover the float\n");
     printf("Hello apes,\n");
     printf("You can call me the average guy.\n");
     printf("With %d accounts at ComputerShare it will take:\n", csAccounts);
