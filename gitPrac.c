@@ -1,31 +1,25 @@
 #include <stdio.h>
-#include <locale.h>
 #include <stdlib.h>
-#define atoa(x) #x
 
 char* intBeautify(int a);
 
 int main(void) {
-    setlocale(LC_ALL, "");
-
-    const struct lconv * const currentlocale = localeconv();
-
-    printf("In the current locale, the default currency symbol is: %s\n",
-        currentlocale->currency_symbol);
-
     int outstandingShares = 76500000;
-    int csAccounts;
-    int GMEaccounts;
+    int outstandingSharesMinusRC = outstandingShares - 9000000;
+    int outstandingSharesMinusInstituions = outstandingShares - 36400000;
+    
+    int csAccounts;//Get ComputerShare accounts in thousands to avoid typing 000
     printf("How many ComputerShare accounts are there in thousands?\n");
     scanf("%d", &csAccounts);
+
+    int GMEaccounts;//determine the number of GameStop Computer share accounts //This might be unnessisary because CS might issue different account number for different stocks
     GMEaccounts = csAccounts * 1000 - 30000;
     int GMEaccountsInK = GMEaccounts / 1000;
-    printf("%d\n", GMEaccountsInK);
-    printf("%d\n", GMEaccounts);
 
-    float allOutstandingShare = (float)outstandingShares / GMEaccounts;
-    float aosMinusRC = ((float)outstandingShares - 9000000) / GMEaccounts;
-    float aosMinusInstitutional = ((float)outstandingShares - 36400000) / GMEaccounts;
+    float allOutstandingShare = (float) outstandingShares / GMEaccounts;
+    float aosMinusRC = (float) outstandingSharesMinusRC / GMEaccounts;
+    float aosMinusInstitutional = (float) outstandingSharesMinusInstituions / GMEaccounts;
+
     printf("Average positions in DRS to cover the float\n");
     printf("Hello apes,\n");
     printf("You can call me the average guy.\n");
