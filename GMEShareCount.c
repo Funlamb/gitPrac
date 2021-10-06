@@ -8,11 +8,13 @@ int main(void) {
     int outstandingSharesMinusRC = outstandingShares - 9000000;
     int outstandingSharesMinusInstituions = outstandingShares - 36400000;
     
-    int csAccounts;//Get ComputerShare accounts in thousands to avoid typing 000
+    //Get ComputerShare accounts in thousands to avoid typing 000
+    int csAccounts;
     printf("How many ComputerShare accounts are there in thousands?\n");
     scanf("%d", &csAccounts);
 
-    int GMEaccounts;//determine the number of GameStop Computer share accounts //This might be unnessisary because CS might issue different account number for different stocks
+    //determine the number of GameStop Computer share accounts //This might be unnessisary because CS might issue different account number for different stocks
+    int GMEaccounts;
     GMEaccounts = csAccounts * 1000 - 30000;
     int GMEaccountsInK = GMEaccounts / 1000;
 
